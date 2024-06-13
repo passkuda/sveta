@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Если ширина вьюпорта меньше или равна 500px
                 paginationDots.style.position = 'absolute';
                 paginationDots.style.transform = 'translateX(-50%)';
-                paginationDots.style.left = '65%';
+                paginationDots.style.left = '70%';
                 paginationDots.style.bottom = '20px';
             } else if (mediaQuery800.matches) {
                 // Если ширина вьюпорта меньше или равна 768px
