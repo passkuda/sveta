@@ -1,0 +1,131 @@
+@import url(reset.css);
+
+
+
+[class*="__container"]{
+	max-width: 1470px;
+	padding: 0 15px;
+	margin: 0 auto;
+	overflow: clip;
+}
+
+
+
+.test{
+	padding: 50px 0;
+	background-color: plum;
+}
+
+.test__row{
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+
+}
+
+@media (max-width:1200px) {
+	.test__row{
+	flex-wrap: wrap;
+	
+	}
+}
+
+.test__items{
+	flex: 1 1 33.333%;
+	perspective: 600px;
+}
+
+@media (max-width:792px) {
+	.test__items{
+		flex: 1 1 50%;
+
+	}
+	
+}
+
+
+@media (any-hover: hover) {
+	.test__item:hover {
+		transform: rotateY(-180deg);
+	}
+}
+
+
+
+.test__item{
+	position: relative;
+	padding-bottom: 400px;
+	transform-origin: center;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+}
+
+
+.test img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+
+.test__img, .test__text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+
+.test__text {
+	background-color: #2980b9;
+	color: #fff;
+	transform: rotateY(180deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+
+/*--------------------------------------- link*/
+
+.test__link{
+	padding: 10px;
+	text-align: center;
+	display: inline-block;
+	line-height: 1.3;
+	
+}
+
+
+.test__link *:not(:last-child){
+	margin-bottom: 20px;
+}
+
+.test__title{
+	font-weight: 700;
+	color: #000;
+	text-transform: uppercase;
+	text-shadow: 3px 1px 2px orange;
+}
+
+.test_button{
+	border: 2px solid #000;
+	padding: 10px 15px;
+	border-radius: 10px;
+	background-color: orange;
+	box-shadow: 2px 3px 4px 5px #000;
+	position: relative;
+	top: 0px;
+}
+
+
+.test_button:active{
+	box-shadow: 1px 2px 2px 2px #000;
+	top: 3px;
+}
